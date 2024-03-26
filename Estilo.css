@@ -1,0 +1,125 @@
+body{
+	font-family: arial, helvetica;
+	 background-image: url("https://image.winudf.com/v2/image/bWUud2FsbHBhcGEuYW1vbGVkX3NjcmVlbl85XzE1MzAwNjY0MTVfMDY4/screen-9.jpg?fakeurl=1&type=.webp");
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+.MenuP{
+	position: fixed;
+	width: 100%;     	/*ancho y largo del cuadrado*/
+	margin: auto;
+	background-color: black;	
+	z-index:1000;
+	top:0;
+}
+.MenuP .imagen{			/*solo se modifica el tamaño disponible para el objeto integrado*/
+	display: inline-block;
+	position: absolute;
+}
+.MenuP .imagen img{		/*Solo para modificar imagen*/
+ 	width: 80px;
+	max-width: 100px;
+}
+.MenuP .Menu{
+	width: 100%;     	/*ancho y largo del cuadrado*/
+	margin: auto;
+  border-bottom: 1px solid white;
+}
+.MenuP .Menu ul{
+	list-style: none; 	/*Quito el formato de lista*/
+	padding: 30px ;		/*Distancia entre texto y cuadrado*/
+	display: block;		/*Con esto digo que solo quiero que lo ingresado ocupe un bloque y no en linea*/	
+	margin: auto;
+	text-align: center; /*centro la lista*/
+}
+.MenuP .Menu ul li{
+	display: inline-block;		/*acomodo el listado en forma Horizontal*/
+	padding: 4px 100px;				/*distancia entre bloque(li)-bloque(a)*/
+}
+.MenuP .Menu ul li a{
+	text-decoration: none;		/*quito subrayado*/
+	color: white;
+	padding: 10px 10px; 
+	position: relative;		
+}
+.MenuP .Menu ul li a:hover{
+	color: black;
+	transition-delay: .1s;
+}
+
+.MenuP .Menu ul li a::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.MenuP .Menu ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.MenuP .Menu ul li a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: #E6E33D;
+  z-index: -1;
+  transition: transform .3s ease;
+  border-radius: 6px;
+}
+
+
+
+
+
+
+
+.Cuerpo{
+	position: relative;
+	display: block;
+	margin: auto;
+	bottom: -96px;
+}
+.Cuerpo article{
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.Cuerpo .publicaciones{	
+	background-color: #0D0D0D;
+	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-evenly;
+}
+
+.Cuerpo .publicaciones img {
+    width: 300px;
+    float: left;
+    padding-bottom: 6px;
+}
+
+.Cuerpo .publicaciones .Productos a{
+	text-decoration: none;
+	position: absolute;
+    right: 15px;
+    bottom: 10px;
+    overflow: auto;
+}
+.Cuerpo .publicaciones .Productos{
+	margin: 20px;
+   padding: 2px 16px;
+   position: relative;
+   background-color: #C3C3C3;
+   transition: all 300ms;
+  cursor: pointer;
+
+}
+
+.Cuerpo .publicaciones .Productos:hover {
+    box-shadow: 6px -3px 1px #F7FF00 ;
+    transition-duration: 0.2s;
+    transform: translate(-5px, 5px);
+ }
+
+
